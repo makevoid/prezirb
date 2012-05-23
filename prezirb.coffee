@@ -1,15 +1,48 @@
 snippets = [
   {
+    title:  "notes:",
+    code:   "get_response google"
+  },
+  {
     title:  "0) start",
     code:   ""
   },
   {
     title:  "--- titolo",
-    code:   ""
+    code:   "\"Tirare giu' il web con Net::HTTP e Mechanize\""
   },
   {
     title:  "1) Net::HTTP",
-    code:   "require 'net/http'"
+    code:   """
+require 'net/http'
+"""
+  },
+  {
+    title:  "--- get_response",
+    code:   """
+Net::HTTP.get_response URI.parse('http://')
+"""
+  },
+  {
+     title:  "--- get_response google",
+     code:   "Net::HTTP.get_response URI.parse('http://google.com')"
+  },
+  {
+     title:  "--- get_response ngi body",
+     code:   "
+page = Net::HTTP.get_response URI.parse('http://ngi.it')
+page.body"
+  },
+  {
+     title:  "--- nokogiri search title",
+     code:   "
+Nokogiri::HTML(page.body).search('title').text"
+  },
+  {
+     title:  "--- get_response ngi body",
+     code:   "
+page = Net::HTTP.get_response URI.parse('http://cantierecreativo.net/it/home')
+page.body"
   },
   {
     title:  "2) Mechanize",
@@ -28,7 +61,7 @@ snippets = [
     code:   ""
   },
   {
-    title:  "",
+    title:  "--- ",
     code:   ""
   },
   {
@@ -156,10 +189,9 @@ expand_commands = ->
 watch_sidebar = ->
   $(".snippets a").on "click", (evt) ->
     idx = $(evt.target).data "snippet-id"
-    snippet = snippets[idx]
-    console.log snippet
+    snippet = window.snippets[idx]
     input = $("#input")
-    input.val snippet
+    input.val $.trim(snippet.code)
     fix_textarea_height()
     input.focus()
     

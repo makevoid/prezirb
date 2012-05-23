@@ -1,5 +1,7 @@
 # PrezIRB
 ### irb browser based presentations
+<https://github.com/makevoid/prezirb>
+
 
 this branch contains the following presentation:
 
@@ -14,3 +16,15 @@ this project has been forked brirb, you can find the source at <>
 - css: fix scrolling
 - open strings in browser
 - rebind default keys
+
+
+### gists:
+
+- Net:HTTP tutorial #1: start block and keep alive requests <https://gist.github.com/1298812>
+
+- Net:HTTP tutorial #2: simple HTTPServer - useful to test your pages/api calls and to play with plain http <https://gist.github.com/1300384>
+
+### libraries:
+
+- <http://zeptojs.com>
+- <http://underscorejs.org>
