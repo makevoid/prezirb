@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title prezirb
+    %link{ href: "prezirb.css", rel: "stylesheet", type: "text/css" }
+    %script{ type: "text/javascript", src: "vendor/jquery.js" }
+    %script{ type: "text/javascript", src: "vendor/underscore.js" }
+    %script{ type: "text/javascript", src: "prezirb.js" }
+  %body
+    .content
+      .irb
+        .log_scroll
+          #log
+        %form.input
+          %textarea#input{ type: 'text' }
+      .snippets.aside
