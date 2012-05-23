@@ -3,10 +3,21 @@
   %head
     %title brirb
     %link{:href => "brirb.css", :rel => "stylesheet", :type => "text/css"}
-    %script{:src => "jquery.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/jquery.min.js", :type => "text/javascript"}
     %script{:src => "brirb.js", :type => "text/javascript"}
   %body
-    #log
-    %form
-      &gt;&gt;
-      %input#input{:type => 'text'}
+    .content
+      .irb
+        .log_scroll
+          #log
+        %form.input
+          %textarea#input{ type: 'text' }
+      .aside
+        %p 
+          %a{ :"data-name" => "start", href: "javascript:void(0)" } 0 - start
+        %p 
+          %a{ :"data-name" => "net_http", href: "javascript:void(0)" } 1 - Net::HTTP  
+        %p 
+          %a{ :"data-name" => "mechanize", href: "javascript:void(0)" } 2 - Mechanize
+        %p 
+          %a{ :"data-name" => "thread", href: "javascript:void(0)" } 3 - Thread

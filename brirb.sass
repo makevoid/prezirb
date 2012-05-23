@@ -1,12 +1,77 @@
+$side: 2%
+$input_height: 36px
+$input_height_tall: 136px
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  
+a
+  text-decoration: none
+  color: #999
+a:hover
+  color: #555
+
 body
   font-family: monospace
-  input#input
-    font-size: 100%
-    font-family: monospace
-    border: none
-    padding: 0
-    margin: 0
-    width: 80%
-    &:focus
-      border: none
-      outline: none
+  font-size: 1.1em
+  height: 100%
+  
+html, body, .irb, .log_scroll
+  height: 100%
+  
+.content
+  margin: 0px $side 0px
+  
+.log_scroll
+  overflow: auto  
+  padding: 0 0 $input_height 0
+
+textarea
+  height: $input_height
+  width: 100% - $side*2
+  position: absolute
+  bottom: 0px
+  border-radius: 4px
+  font-size: 100%
+  font-family: monospace
+  background: #EAEAEA
+  border: none
+  padding: 8px 1%
+  border: 1px solid #AAA
+  
+  &:focus
+    border: 1px solid #888
+    outline: none
+    
+textarea.tall
+  height: $input_height_tall
+    
+.cmd, .out, #input
+  border-radius: 5px
+  padding: 8px 1%
+  margin: 0 0 2px
+    
+.cmd
+  background: #DADADA
+.out
+  background: #EAEAEA
+  margin: 0 0 10px
+  .full
+    display: none
+    
+.aside, .irb
+  margin: 5px 0 0 0 
+  float: left
+  font-size: 0.9em
+
+.irb
+  width: 80%
+.aside
+  width: 20%
+  padding: 0 5px
+  
+.aside
+  
+  

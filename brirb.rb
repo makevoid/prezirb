@@ -1,5 +1,5 @@
 require 'em-websocket'
-require 'monkey/engine'
+# require 'monkey/engine'
 require 'capture_stdout'
 require 'escape_utils'
 
@@ -8,7 +8,7 @@ EventMachine.run do
     brirb_binding = binding
     line = 1
     _ = nil
-    ws.onopen { ws.send RUBY_DESCRIPTION }
+    ws.onopen { ws.send 'console started' }
     ws.onmessage do |msg|
       response = ""
       begin
@@ -16,10 +16,10 @@ EventMachine.run do
           _ = eval(msg, brirb_binding, '(brirb session)', line)
         end
         line += 1
-        response << stdout << "=> #{_.inspect}"
+        response << stdout << _.inspect
       rescue Exception => e
         response << e.to_s << "\n" << e.backtrace.map { |l| "\t#{l}" }.join("\n")
-      end  
+      end
       ws.send EscapeUtils.escape_html(response).gsub("\n", "<br>").gsub("\t", "    ").gsub(" ", "&nbsp;")
     end
   end
