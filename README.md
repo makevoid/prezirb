@@ -2,20 +2,32 @@
 ### irb browser based presentations
 <https://github.com/makevoid/prezirb>
 
+### running this presentation:
+
+download/clone the repo
+
+    bundle
+    ruby prezirb.rb
+
+open prezirb.html in your browser
+
+
+### usage
+
+- cmd+enter   = run command
+- cmd+up/down = history
+
+cmd is meta key
+
 
 this branch contains the following presentation:
 
-# "Tirare giù il web" con Net::HTTP e Mechanize
+### "Tirare giù il web" con Net::HTTP e Mechanize
 <http://florenceonruby.it/talks/2>
 
 
-this project has been forked brirb, you can find the source at <>
+this project has been forked brirb, you can find the source at <https://github.com/rkh/brirb>
 
-### todo:
-
-- css: fix scrolling
-- open strings in browser
-- rebind default keys
 
 
 ### gists:
