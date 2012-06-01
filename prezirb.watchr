@@ -15,6 +15,6 @@ def sys(cmd)
    end
 end
 
-w '*.coffee',       'coffee -c %s'
+w '*.coffee',       'coffee -j prezirb.js -c presentation.coffee prezirb.coffee'
 w '*.(sass|scss)',  'compass compile --sass-dir . --css-dir . --images-dir . --javascripts-dir .'
 w 'prezirb.haml',     'haml --format html5 prezirb.haml prezirb.html'

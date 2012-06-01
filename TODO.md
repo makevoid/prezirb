@@ -1,0 +1,1 @@
+- rename snippets to slides
