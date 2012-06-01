@@ -112,7 +112,6 @@ expand_commands = ->
     truncated.parent().children(".full").show()
     scroll()
 
-
 watch_sidebar = ->
   $(".snippets a").on "click", (evt) ->
     idx = $(evt.target).data "snippet-id"

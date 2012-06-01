@@ -2,7 +2,7 @@
 ### irb browser based presentations
 <https://github.com/makevoid/prezirb>
 
-### running this presentation:
+### running the demo presentation:
 
 download/clone the repo
 
@@ -20,23 +20,21 @@ open prezirb.html in your browser
 cmd is meta key
 
 
-this branch contains the following presentation:
+### presentation
 
-### "Tirare giù il web" con Net::HTTP e Mechanize
-<http://florenceonruby.it/talks/2>
-
+your presentation stays in presentation.coffee file, it's an array of hashes containing slides (code snippets) you can easily paste in PreziIRB with a click
 
 this project has been forked brirb, you can find the source at <https://github.com/rkh/brirb>
 
 
+### development
 
-### gists:
+to improve PreziIRB you need to install the watcher gem:
 
-- Net:HTTP tutorial #1: start block and keep alive requests <https://gist.github.com/1298812>
+    gem i watcher
 
-- Net:HTTP tutorial #2: simple HTTPServer - useful to test your pages/api calls and to play with plain http <https://gist.github.com/1300384>
+then run:
 
-### libraries:
+    watchr prezirb.watchr
 
-- <http://zeptojs.com>
-- <http://underscorejs.org>
+then if you edit a coffeescript, haml or sass file and save it it will get compiled
