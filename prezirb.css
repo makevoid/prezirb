@@ -1,0 +1,171 @@
+/* line 6, prezirb.sass */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* line 11, prezirb.sass */
+a {
+  text-decoration: none;
+  color: #999999;
+}
+
+/* line 14, prezirb.sass */
+a:hover {
+  color: #555555;
+}
+
+/* line 17, prezirb.sass */
+body {
+  font-family: monospace;
+  font-size: 1.3em;
+  height: 100%;
+}
+
+/* line 22, prezirb.sass */
+html, body, .irb, .log_scroll, .content, .aside {
+  height: 100%;
+}
+
+/* line 25, prezirb.sass */
+.content {
+  margin: 0px 2% 0px;
+}
+
+/* line 28, prezirb.sass */
+.log_scroll {
+  overflow: auto;
+  padding: 0 0 58px 0;
+}
+
+/* line 32, prezirb.sass */
+textarea {
+  height: 46px;
+  width: 96%;
+  position: absolute;
+  z-index: 2;
+  bottom: 11px;
+  border-radius: 4px;
+  font-size: 100%;
+  font-family: monospace;
+  background: #eaeaea;
+  border: none;
+  padding: 8px 1%;
+  border: 1px solid #aaaaaa;
+}
+/* line 45, prezirb.sass */
+textarea:focus {
+  border: 1px solid #888888;
+  outline: none;
+}
+
+/* line 49, prezirb.sass */
+textarea.tall {
+  height: 186px;
+}
+
+/* line 52, prezirb.sass */
+.cmd, .out, #input {
+  border-radius: 5px;
+  padding: 8px 1%;
+  margin: 0 0 2px;
+}
+
+/* line 57, prezirb.sass */
+.cmd {
+  background: #dadada;
+}
+
+/* line 59, prezirb.sass */
+.out {
+  background: #eaeaea;
+  margin: 0 0 10px;
+}
+/* line 62, prezirb.sass */
+.out .full {
+  display: none;
+}
+
+/* line 65, prezirb.sass */
+.out {
+  width: 100%;
+}
+
+/* line 68, prezirb.sass */
+.out a {
+  color: #ee0000;
+}
+
+/* line 71, prezirb.sass */
+.aside, .irb {
+  margin: 5px 0 0 0;
+  float: left;
+  font-size: 0.9em;
+}
+
+/* line 76, prezirb.sass */
+.irb {
+  width: 80%;
+}
+
+/* line 78, prezirb.sass */
+.aside {
+  width: 20%;
+  overflow: auto;
+  padding: 0 5px 0 1%;
+}
+/* line 82, prezirb.sass */
+.aside a {
+  color: #aaaaaa;
+}
+
+/* line 85, prezirb.sass */
+.browser {
+  position: absolute;
+  z-index: 3;
+  top: 20px;
+  left: 15%;
+  padding: 1.5%;
+  background: rgba(200, 200, 200, 0.9);
+  border-radius: 8px;
+  width: 70%;
+  margin: 0 auto;
+  display: none;
+}
+/* line 96, prezirb.sass */
+.browser .frame {
+  position: relative;
+}
+/* line 98, prezirb.sass */
+.browser .close {
+  right: -18px;
+  top: -20px;
+  position: absolute;
+  background: #444444;
+  border-radius: 5px;
+  color: white;
+  padding: 0 4px 4px;
+}
+/* line 106, prezirb.sass */
+.browser .close:hover {
+  background: black;
+}
+/* line 109, prezirb.sass */
+.browser .iframe {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* line 113, prezirb.sass */
+.out {
+  z-index: 1;
+  position: relative;
+  display: block;
+}
+/* line 117, prezirb.sass */
+.out .browser_btn {
+  position: absolute;
+  right: 1%;
+  top: 3px;
+}

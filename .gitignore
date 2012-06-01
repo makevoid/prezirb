@@ -1,4 +1,2 @@
-*.js
-*.css
-*.html
 .sass-cache
+tmp
